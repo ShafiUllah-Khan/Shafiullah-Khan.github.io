@@ -4,60 +4,184 @@
   <meta charset="utf-8" />
   <title>Shafi Ullah Khan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="AI Security · Distributed/Federated Learning · Wireless Sensing" />
+  <style>
+    :root{
+      --bg:#f7f7fb; --fg:#0f172a; --muted:#475569; --link:#2563eb; --card:#ffffff; --border:#e2e8f0;
+      --max:1150px; --sidebar:300px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0d1117; --fg:#e6edf3; --muted:#9aa4ae; --link:#58a6ff; --card:#0f141b; --border:#1f2630; }
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header.nav{
+      position:sticky; top:0; z-index:10; background:var(--card); border-bottom:1px solid var(--border);
+    }
+    header .wrap{max-width:var(--max); margin:auto; display:flex; gap:1rem; align-items:center; padding:10px 16px}
+    header .brand{font-weight:700}
+    header nav{margin-left:auto; display:flex; gap:16px; flex-wrap:wrap}
+    .page{max-width:var(--max); margin:18px auto; padding:0 16px; display:grid; grid-template-columns:var(--sidebar) 1fr; gap:24px}
+    @media(max-width:900px){ .page{grid-template-columns:1fr} }
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px;
+      box-shadow:0 1px 0 rgba(0,0,0,.04)
+    }
+    .profile{position:sticky; top:72px}
+    .pfp{width:110px; height:110px; border-radius:12px; background:#d0d7de; display:block; object-fit:cover}
+    .muted{color:var(--muted)}
+    .list{margin:0; padding-left:18px}
+    h1{margin:.2rem 0 0}
+    h2{margin:0 0 .6rem}
+    section{margin-bottom:22px}
+    .item{margin-bottom:.5rem}
+    .kvs{display:grid; grid-template-columns:18px 1fr; gap:10px; margin:.4rem 0}
+    .pill{display:inline-block; padding:2px 10px; border:1px solid var(--border); border-radius:999px; margin:3px 6px 0 0; font-size:13px}
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media(max-width:700px){ .grid2{grid-template-columns:1fr} }
+    footer{max-width:var(--max); margin:24px auto 80px; padding:0 16px; color:var(--muted); font-size:14px}
+    .small{font-size:14px}
+  </style>
 </head>
 <body>
-<header class="nav">
-  <div class="wrap flex">
-    <strong>Shafi Ullah Khan</strong>
-    <nav>
-      <a class="btn" href="publications.html" target="_blank">Publications</a>
-      <a class="btn" href="projects.html" target="_blank">Projects</a>
-      <a class="btn" href="gallery.html" target="_blank">Gallery</a>
-      <a class="btn" href="awards.html" target="_blank">Awards</a>
-      <a class="btn" href="services.html" target="_blank">Services</a>
-      <a class="btn" href="cv.html" target="_blank">CV</a>
-    </nav>
-  </div>
-</header>
 
-<main class="wrap page">
-  <!-- Sidebar -->
-  <aside class="card profile">
-    <img class="pfp" src="assets/photo.jpg" alt="Profile photo" />
-    <h1>Shafi Ullah Khan</h1>
-    <p class="muted">Ph.D. Student, Computer Science<br/>University of Texas at Arlington</p>
-    <p>📍 Arlington, Texas, USA<br/>
-       🏫 TWiST Lab<br/>
-       👨‍🏫 Advisor: Prof. Debashri Roy</p>
-    <p>✉️ <a href="mailto:shafiukhan98@gmail.com">shafiukhan98@gmail.com</a><br/>
-       🌐 <a href="https://github.com/ShafiUllah-Khan">GitHub</a> ·
-       <a href="https://www.linkedin.com/in/shafiullah-khan">LinkedIn</a> ·
-       <a href="#" title="Google Scholar">Scholar</a></p>
-    <div>
-      <span class="pill">AI Security</span>
-      <span class="pill">Federated Learning</span>
-      <span class="pill">Wireless Sensing</span>
-      <span class="pill">Distributed Systems</span>
+  <!-- Top navigation -->
+  <header class="nav">
+    <div class="wrap">
+      <div class="brand">Shafi Ullah Khan</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#interests">Research</a>
+        <a href="#news">News</a>
+        <a href="#pubs">Publications</a>
+        <a href="#awards">Awards</a>
+        <a href="#services">Services</a>
+        <a href="#cv">CV</a>
+      </nav>
     </div>
-  </aside>
+  </header>
 
-  <!-- Main intro -->
-  <section class="card">
-    <h2>About me</h2>
-    <p>
-      I’m a researcher focused on <b>deep learning</b>, <b>federated/distributed learning</b>, and
-      <b>wireless sensing</b> for Next-G systems. My work explores privacy-aware ML for spectrum
-      sensing, interference mitigation, and practical deployment across cloud/edge/mobile.
-    </p>
-    <p>
-      Use the buttons in the top bar to open <b>Publications</b>, <b>Projects</b>,
-      <b>Gallery</b>, <b>Awards</b>, <b>Services</b>, and <b>CV</b> in a new tab.
-    </p>
-  </section>
-</main>
+  <main class="page">
 
-<footer class="wrap">© <span id="y"></span> Shafi Ullah Khan</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <!-- Left sidebar -->
+    <aside class="card profile">
+      <img class="pfp" src="assets/photo.jpg" alt="Profile photo" />
+      <h1>Shafi Ullah Khan</h1>
+      <p class="muted small">Ph.D. Student, Computer Science<br/>University of Texas at Arlington</p>
+
+      <div class="kvs">
+        <span>📍</span><span>Arlington, Texas, USA</span>
+        <span>🏫</span><span>Transformative Wireless Systems & Technology (TWiST) Lab</span>
+        <span>👨‍🏫</span><span>Advisor: Prof. Debashri Roy</span>
+        <span>✉️</span><span><a href="mailto:shafiukhan98@gmail.com">shafiukhan98@gmail.com</a></span>
+        <span>🌐</span><span><a href="https://github.com/ShafiUllah-Khan">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/shafiullah-khan">LinkedIn</a> ·
+          <a href="#" title="Google Scholar">Scholar</a></span>
+      </div>
+
+      <div>
+        <span class="pill">AI Security</span>
+        <span class="pill">Federated Learning</span>
+        <span class="pill">Wireless Sensing</span>
+        <span class="pill">Distributed Systems</span>
+      </div>
+    </aside>
+
+    <!-- Right column content -->
+    <div>
+
+      <section id="about" class="card">
+        <h2>About me</h2>
+        <p>
+          I am a machine learning researcher focused on <b>deep learning</b>, <b>federated / distributed learning</b>,
+          and <b>multi-modal AI</b> applied to <b>wireless communications</b> and <b>digital healthcare</b>.
+          My current work at UTA’s TWiST Lab explores privacy-aware, scalable ML for spectrum sensing, resource allocation,
+          and interference mitigation in Next-G systems (5G/6G). I also work on practical ML deployments across cloud/edge/mobile.
+        </p>
+      </section>
+
+      <section id="interests" class="card">
+        <h2>Research Interests</h2>
+        <ul class="list">
+          <li><b>Distributed / Federated Learning</b> — anomaly detection, computer vision, privacy retention</li>
+          <li><b>Signal Processing</b> — EEG/ECG/EMG analytics, vibration/acoustic sensing</li>
+          <li><b>Wireless Communications</b> — spectrum sensing, Next-G systems, AI/ML for wireless</li>
+        </ul>
+      </section>
+
+      <section id="news" class="card">
+        <h2>News</h2>
+        <ul class="list">
+          <li class="item"><b>2025:</b> <i>In-Network Fusion for High Interference Signal Detection within CBRS Band</i> — accepted at IEEE INFOCOM 2025.</li>
+          <li class="item"><b>2024–2025:</b> Reviewer for IEEE TMC, ICC, CAAI TIT, Discover Computing/IoT (Springer), The Journal of Supercomputing.</li>
+          <li class="item"><b>2024:</b> Joined UTA (Ph.D., CS) with fully funded scholarship.</li>
+        </ul>
+      </section>
+
+      <section id="pubs" class="card">
+        <h2>Publications</h2>
+        <ul class="list">
+          <li><b>Khan, S.U.</b>, Hwang, T., Koo, I.S. “Radio Environment Map Construction Based on Privacy-centric Federated Learning.” <i>IEEE Access</i>. <a href="https://ieeexplore.ieee.org/document/10440080">pdf</a></li>
+          <li><b>Khan, S.U.</b>, Jan, S.U., Koo, I.S. “Robust Epileptic Seizure Detection Using LSTM and Feature Fusion of Time–Frequency EEG Images.” <i>Sensors</i>, 2023. <a href="https://www.mdpi.com/1424-8220/23/23/9572">pdf</a></li>
+          <li><b>Khan, S.U.</b>, Hwang, T., Koo, I.S. “Bridging the Connectivity Gap within a PLC and Wi-Fi Hybrid Network.” <i>IJACT</i>, 2023. <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002943968">pdf</a></li>
+          <li><b>Khan, S.U.</b> “Enhancing PLC-WiFi Connectivity & REM via Federated Learning.” M.S. Thesis, Univ. of Ulsan. <a href="https://oak.ulsan.ac.kr/bitstream/2021.oak/13077/2/200000735404.pdf">thesis</a></li>
+          <li>Rehan, <b>Khan, S.U.</b>, Koo, I.S. “Parallel Transformation for Detecting Pulmonary Disorders via Auscultation Sound with Deep Learning.” <i>Bioengineering</i>, 2024. <a href="https://doi.org/10.3390/bioengineering11060586">pdf</a></li>
+          <li>Asim Ishaq, …, <b>Khan, S.U.</b>, … “Partial Discharge Defect Classification in MV Switchgear Through Deep Learning.” <i>IEEE TIM</i>, 2024. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10971992">pdf</a></li>
+          <li><b>Khan, S.U.</b>, Debashri Roy. “In-Network Fusion for High Interference Signal Detection within CBRS Band.” <i>IEEE INFOCOM 2025</i> (accepted).</li>
+          <li>Aziz, <b>Khan, S.U.</b>, Koo, I.S. “A REM-Based Approach for Occupancy Detection in Smart Buildings.” <i>ICICT</i> (accepted).</li>
+          <li>Wasim Zaman, <b>Khan, S.U.</b>, … “Advanced Fault Diagnosis in Rotary Machines Using Optimized Transfer Learning.” <i>IEEE TIM</i> (under review).</li>
+        </ul>
+        <p class="small">Full list: <a href="#">Google Scholar</a></p>
+      </section>
+
+      <section id="awards" class="card">
+        <h2>Awards</h2>
+        <ul class="list">
+          <li>Fully Funded Scholarship — University of Texas at Arlington (Ph.D.).</li>
+          <li>BK21+ Scholarship — University of Ulsan (M.S.).</li>
+          <li>Prime Minister Merit Certificate & Laptop (Pakistan).</li>
+        </ul>
+      </section>
+
+      <section id="services" class="card grid2">
+        <div>
+          <h2>Professional Services</h2>
+          <ul class="list">
+            <li>Reviewer: IEEE Transactions on Mobile Computing (TMC)</li>
+            <li>Reviewer: IEEE ICC</li>
+            <li>Reviewer: CAAI Transactions on Intelligence Technology</li>
+            <li>Reviewer: Discover Computing / Discover IoT (Springer)</li>
+            <li>Reviewer: The Journal of Supercomputing (Springer)</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Affiliations</h2>
+          <ul class="list">
+            <li>IEEE, IEEE ComSoc, IEEE Young Professionals</li>
+            <li>ACM</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cv" class="card">
+        <h2>CV</h2>
+        <p>Short CV sections:</p>
+        <ul class="list">
+          <li><b>Education:</b> Ph.D. CS (UTA, 2024– ), M.S. EE (Ulsan, 2022–24), B.S. EE (UET Peshawar, 2016–20)</li>
+          <li><b>Experience:</b> Graduate Research/Teaching Assistant (UTA TWiST Lab); GRA (Ulsan)</li>
+          <li><b>Skills:</b> Python (PyTorch/TensorFlow, NumPy/Pandas), MATLAB, C/C++; LaTeX, Raspberry Pi</li>
+        </ul>
+        <p><a href="cv.pdf">Download full CV (PDF)</a> — place your PDF as <code>cv.pdf</code> in the repo.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Shafi Ullah Khan · Last updated automatically when you push
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
